@@ -38,9 +38,8 @@ export default {
     sendDataToParent() {
       this.$emit("sendArticle", this.product_data.article);
     },
+    addToCard() {},
   },
-
- 
 
   watch: {},
 
