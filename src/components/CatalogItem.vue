@@ -1,9 +1,10 @@
 <template>
   <div class="catalog_item">
-    <img
+    <img class="catalog_item_image" src="" alt="img" />
+    <!-- <img
       class="catalog_item_image"
       :src="require('../assets/images/' + product_data.image)"
-      alt="img" />
+      alt="img" /> -->
     <p class="catalog_item_name">{{ product_data.name }}</p>
     <p class="catalog_item_price">Price: {{ product_data.price }}</p>
     <button
@@ -39,7 +40,7 @@ export default {
     },
   },
 
-  computed: {},
+ 
 
   watch: {},
 
