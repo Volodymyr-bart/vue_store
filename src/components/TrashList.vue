@@ -1,16 +1,20 @@
 <template>
-  <div class="container">CartItem</div>
+  <div class="container">
+    <h1>Trash</h1>
+    <TrashItem />
+  </div>
 </template>
 
 <script>
+import TrashItem from "@/components/TrashItem.vue";
 export default {
-  name: "CartItem",
+  name: "TrashList",
   data() {
     return {};
   },
   props: {},
 
-  components: {},
+  components: { TrashItem },
 
   created() {},
 

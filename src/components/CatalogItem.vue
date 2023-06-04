@@ -9,7 +9,8 @@
     <p class="catalog_item_price">Price: {{ product_data.price }}</p>
     <button
       class="catalog_item_btn"
-      @click="sendDataToParent(product_data.article)">
+      @click="sendDataToParent(product_data.article)"
+      >
       Add to card
     </button>
   </div>
