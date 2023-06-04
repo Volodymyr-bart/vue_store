@@ -6,7 +6,7 @@
         v-for="product in PRODUCTS"
         :key="product.article"
         :product_data="product"
-        @sendArticle="showChildArticle" />
+        @ADD_TO_CARD="addToCard" />
     </div>
   </div>
 </template>
@@ -31,9 +31,9 @@ export default {
   },
 
   methods: {
-    ...mapActions(["GET_PRODUCTS_FROM_API"]),
-    showChildArticle(data) {
-      console.log("hello", data);
+    ...mapActions(["GET_PRODUCTS_FROM_API", "ADD_TO_CARD"]),
+    addToCard(data) {
+      this.ADD_TO_CARD(data);
     },
   },
 
@@ -51,6 +51,7 @@ export default {
 <style scoped lang="scss">
 .catalog {
   &_list {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

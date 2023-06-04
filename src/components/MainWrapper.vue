@@ -1,5 +1,7 @@
 <template>
-  <div class="main-wrapper"><slot></slot></div>
+  <div class="main-wrapper">
+    <slot></slot>
+  </div>
 </template>
 
 <script>
@@ -31,6 +33,7 @@ export default {
 <style scoped lang="scss">
 .main-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 900px;

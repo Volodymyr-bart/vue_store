@@ -1,7 +1,7 @@
 <template>
   <MainWrapper>
     <CatalogList />
-    <TrashList v-if="CART.length" />
+    <TrashList v-if="CARD.length" :card_data="CARD" />
   </MainWrapper>
 </template>
 
@@ -14,7 +14,7 @@ export default {
   name: "App",
   components: { MainWrapper, CatalogList, TrashList },
   computed: {
-    ...mapGetters(["CART"]),
+    ...mapGetters(["CARD"]),
   },
 };
 </script>

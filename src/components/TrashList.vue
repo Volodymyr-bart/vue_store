@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <h1>Trash</h1>
-    <TrashItem />
+    <TrashItem
+      v-for="item in card_data"
+      :key="item.name"
+      :card_item_data="item" />
   </div>
 </template>
 
@@ -12,7 +15,14 @@ export default {
   data() {
     return {};
   },
-  props: {},
+  props: {
+    card_data: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
 
   components: { TrashItem },
 

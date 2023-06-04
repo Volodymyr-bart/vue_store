@@ -7,12 +7,7 @@
       alt="img" /> -->
     <p class="catalog_item_name">{{ product_data.name }}</p>
     <p class="catalog_item_price">Price: {{ product_data.price }}</p>
-    <button
-      class="catalog_item_btn"
-      @click="sendDataToParent(product_data.article)"
-      >
-      Add to card
-    </button>
+    <button class="catalog_item_btn" @click="addToCard">Add to card</button>
   </div>
 </template>
 
@@ -36,10 +31,9 @@ export default {
   mounted() {},
 
   methods: {
-    sendDataToParent() {
-      this.$emit("sendArticle", this.product_data.article);
+    addToCard() {
+      this.$emit("addToCard", this.product_data);
     },
-    addToCard() {},
   },
 
   watch: {},
